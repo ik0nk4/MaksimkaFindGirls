@@ -10,15 +10,14 @@ config_version=5
 
 [application]
 
-config/name="MaksikGIT"
-run/main_scene="res://Scenes/UI/main_menu.tscn"
+config/name="MaksimkaFindGirls"
+run/main_scene="res://Scenes/UI/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=3
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
 [importer_defaults]
@@ -55,5 +54,5 @@ Shift={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-anti_aliasing/quality/msaa_2d=2
-anti_aliasing/quality/use_taa=true
+renderer/rendering_method="gl_compatibility"
+anti_aliasing/quality/msaa_2d=1
