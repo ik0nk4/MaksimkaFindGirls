@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpunf8vtio0hb"]
+
+[ext_resource type="Script" uid="uid://davq1e0iidems" path="res://Scripts/Levels/global_settings_level.gd" id="1_rtqcm"]
+[ext_resource type="PackedScene" uid="uid://c7qa7mp0g2gld" path="res://Characters/player.tscn" id="2_bbg73"]
+[ext_resource type="Texture2D" uid="uid://dte45a05dseyb" path="res://Sprite-0005.png" id="2_ikeak"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8t1w"]
+texture = ExtResource("2_ikeak")
+texture_region_size = Vector2i(32, 32)
+9:2/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_4330q"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_x8t1w")
+
+[node name="Max\'s_room" type="Node2D"]
+script = ExtResource("1_rtqcm")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(25, 0)
+tile_set = SubResource("TileSet_4330q")
+format = 2
+layer_0/tile_data = PackedInt32Array(262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 262140, 0, 0, 262139, 0, 0, 262138, 0, 0, 262137, 0, 0, 262136, 0, 0, 262135, 0, 0, 262134, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_bbg73")]
+position = Vector2(-16, 45)
+scale = Vector2(0.808954, 0.822585)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1.23616, -30.392)
+scale = Vector2(1.0119, 0.391605)
+zoom = Vector2(4, 4)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
